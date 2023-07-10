@@ -1,0 +1,19 @@
+<!-- <h5>Buscar:</h5>
+<input
+  type="text"
+  (keyup.enter)="searchTag()"
+  #txtTagInput
+  class="form-control"
+  placeholder="Buscar gifs..."
+/> -->
+
+<h5>Search:</h5>
+<input
+  type="text"
+  [(ngModel)]="newTag"
+  (keyup.enter)="searchTag()"
+  #txtTagInput
+  [ngClass]="{ change: newTag }"
+  class="form-control"
+  placeholder="Search gifs..."
+/>
